@@ -4,127 +4,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ariba Maryum - CV</title>
+
+<title>Ariba Maryum | CV</title>
+<meta name="description" content="Professional CV of Ariba Maryum, Karachi, Pakistan.">
 
 <style>
+:root {
+    --primary: #293e4b;
+    --header: #e3e4e6;
+    --text: #333;
+    --muted: #68737b;
+    --line: #d4d7da;
+}
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #eeeeee;
-    color: #333;
-    padding: 20px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eeeeef;
+    color: var(--text);
+    line-height: 1.55;
+    padding: 25px 12px;
 }
 
 .cv {
-    width: 100%;
     max-width: 850px;
-    min-height: 1100px;
+    width: 100%;
     margin: auto;
     background: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,.08);
 }
 
 .header {
-    background: #dedee2;
+    background: var(--header);
     text-align: center;
-    padding: 35px 10px;
+    padding: 35px 15px;
 }
 
 .header h1 {
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 38px;
+    letter-spacing: 1px;
+    color: var(--primary);
+}
+
+.header p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
 }
 
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 35px;
-    padding: 35px 30px;
+    padding: 32px 35px;
 }
 
 .section {
-    margin-bottom: 30px;
+    margin-bottom: 27px;
 }
 
 .section h2 {
-    font-size: 22px;
-    margin-bottom: 18px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    color: var(--primary);
+    font-size: 19px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 7px;
+    margin-bottom: 14px;
 }
 
-.icon {
-    font-size: 24px;
+.section p,
+.section li {
+    font-size: 13.5px;
+    line-height: 1.65;
 }
 
-.section p {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 8px;
+.section ul {
+    padding-left: 20px;
 }
 
-ul {
-    padding-left: 25px;
+.section li {
+    margin-bottom: 4px;
 }
 
-li {
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-.item {
-    border-left: 2px solid #333;
-    padding-left: 25px;
-    margin-left: 5px;
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.item::before,
-.item::after {
-    content: "";
-    position: absolute;
-    left: -6px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #333;
-}
-
-.item::before {
-    top: 0;
-}
-
-.item::after {
-    bottom: 0;
-}
-
-.item h3 {
-    font-size: 17px;
-    margin-bottom: 5px;
-}
-
-.date {
-    font-size: 17px !important;
-    font-weight: bold;
-}
-
-.contact p {
+.contact a {
+    color: var(--primary);
+    text-decoration: none;
     overflow-wrap: anywhere;
 }
 
-@media (max-width: 500px) {
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.contact p {
+    margin-bottom: 8px;
+}
+
+.item {
+    position: relative;
+    border-left: 2px solid var(--line);
+    padding: 0 0 18px 17px;
+    margin-left: 5px;
+}
+
+.item:last-child {
+    padding-bottom: 0;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.item h3 {
+    color: var(--primary);
+    font-size: 14px;
+    margin: 3px 0;
+}
+
+.date {
+    font-weight: bold;
+    font-size: 12px !important;
+    color: var(--muted);
+}
+
+.download {
+    text-align: center;
+    padding: 0 15px 28px;
+}
+
+.download a {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer {
+    border-top: 1px solid var(--line);
+    text-align: center;
+    padding: 13px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* Mobile layout */
+@media(max-width: 600px) {
     body {
-        padding: 5px 0;
+        padding: 8px 5px;
     }
 
     .header {
-        padding: 22px 5px;
+        padding: 25px 10px;
     }
 
     .header h1 {
@@ -132,62 +177,42 @@ li {
     }
 
     .content {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-        padding: 20px 12px;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 25px 22px;
     }
 
     .section {
-        margin-bottom: 22px;
+        margin-bottom: 23px;
     }
 
     .section h2 {
-        font-size: 15px;
-        gap: 5px;
-        margin-bottom: 12px;
-    }
-
-    .icon {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     .section p,
-    li {
-        font-size: 11px;
-        line-height: 1.6;
-    }
-
-    .item {
-        padding-left: 12px;
-        margin-left: 3px;
-        margin-bottom: 18px;
-    }
-
-    .item h3 {
-        font-size: 12px;
-    }
-
-    .date {
-        font-size: 12px !important;
-    }
-
-    ul {
-        padding-left: 15px;
+    .section li {
+        font-size: 14px;
     }
 }
 
+/* Print layout */
 @media print {
     body {
-        padding: 0;
         background: white;
+        padding: 0;
     }
 
     .cv {
-        max-width: 100%;
+        box-shadow: none;
     }
 
     .content {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .download {
+        display: none;
     }
 }
 </style>
@@ -198,53 +223,48 @@ li {
 <div class="cv">
 
 <header class="header">
-    <h1>Ariba Maryum</h1>
+    <h1>ARIBA MARYUM</h1>
+    <p>CURRICULUM VITAE</p>
 </header>
 
 <div class="content">
 
 <!-- LEFT COLUMN -->
-<div class="left">
+
+<main>
 
 <section class="section">
-    <h2><span class="icon">👤</span> About Me</h2>
+    <h2>About Me</h2>
     <p>
-    A self-motivated, adaptable, and dedicated individual
-    with a positive attitude and willingness to learn.
-    Capable of adjusting to different work environments,
-    taking on new challenges, and approaching tasks
-    with responsibility. Seeking an opportunity to
-    contribute to an organization while enhancing
-    professional growth.
+        A self-motivated, adaptable, and dedicated
+        individual with a positive attitude and
+        willingness to learn. Capable of adjusting
+        to different work environments, taking on
+        new challenges, and approaching tasks
+        with responsibility. Seeking an opportunity
+        to contribute to an organization while
+        enhancing professional growth.
     </p>
 </section>
 
-
 <section class="section contact">
-    <h2>☎ Contact</h2>
-
-    <p>📞 0322-2966960</p>
+    <h2>Contact</h2>
 
     <p>
-      ✉ <a href="mailto:aribamaryum291208@gmail.com">
-      Email Me</a>
+        📞 <a href="tel:+923222969660">
+        0322-2966960</a>
     </p>
 
     <p>
-      💬 <a href="https://wa.me/923222969660">
-      WhatsApp Me</a>
-    </p>
-
-    <p>
-      🔗 <a href="YOUR-LINKEDIN-URL">
-      LinkedIn Profile</a>
+        ✉ <a href="mailto:aribamaryum291208@gmail.com">
+        aribamaryum291208@gmail.com</a>
     </p>
 
     <p>📍 Karachi, Pakistan</p>
 </section>
 
 <section class="section">
-    <h2><span class="icon">⚙</span> Skills</h2>
+    <h2>Skills</h2>
     <ul>
         <li>Digital Literacy</li>
         <li>Administrative Support</li>
@@ -258,31 +278,32 @@ li {
 </section>
 
 <section class="section">
-    <h2><span class="icon">文</span> Language</h2>
+    <h2>Language</h2>
     <ul>
         <li>Urdu</li>
         <li>English</li>
     </ul>
 </section>
 
-</div>
+</main>
 
 <!-- RIGHT COLUMN -->
-<div class="right">
+
+<aside>
 
 <section class="section">
-    <h2><span class="icon">🎓</span> Education</h2>
+    <h2>Education</h2>
 
     <div class="item">
         <p class="date">(2021-2023)</p>
         <h3>AL HIRA ENGLISH SCHOOL</h3>
-        <p>Matriculation In Science</p>
+        <p>Matriculation in Science</p>
     </div>
 
     <div class="item">
         <p class="date">(2023-2025)</p>
         <h3>GDGC BUFFERZONE KARACHI</h3>
-        <p>Intermediate In Pre-Medical</p>
+        <p>Intermediate in Pre-Medical</p>
     </div>
 
     <div class="item">
@@ -293,47 +314,43 @@ li {
 </section>
 
 <section class="section">
-    <h2><span class="icon">🏅</span> Experience</h2>
+    <h2>Experience</h2>
 
     <div class="item">
         <p class="date">June 2025 - March 2026</p>
         <h3>THE FLASH REVIEW</h3>
-        <p>Worked As Junior Associate</p>
+        <p>Worked as Junior Associate</p>
     </div>
 
     <div class="item">
         <p class="date">May 2026 - Present</p>
         <h3>INSAAF MEDICAL COMPLEX</h3>
-        <p>Worked As Receptionist</p>
+        <p>Worked as Receptionist</p>
     </div>
 </section>
 
 <section class="section">
-    <h2><span class="icon">📜</span> Certifications</h2>
+    <h2>Certifications</h2>
     <ul>
         <li>Microsoft Office Course</li>
         <li>Front-End Web Development</li>
     </ul>
 </section>
 
-</div>
-</div>
+</aside>
 </div>
 
-<a href="CV-Ariba.pdf" download
-style="
-display:block;
-width:fit-content;
-margin:25px auto;
-padding:14px 25px;
-background:#203b4a;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-">
-Download My CV (PDF)
-</a>
-    
+<div class="download">
+    <a href="CV-Ariba.pdf" download>
+        ↓ Download My CV (PDF)
+    </a>
+</div>
+
+<footer class="footer">
+    © Ariba Maryum | Professional CV
+</footer>
+
+</div>
+
 </body>
 </html>
