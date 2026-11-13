@@ -2,191 +2,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ariba Maryum | CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ariba Maryum - CV</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f4f7;
-            color: #333;
-            line-height: 1.6;
-            padding: 30px 15px;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #eeeeee;
+    color: #333;
+    padding: 20px 10px;
+}
 
-        .cv {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            display: grid;
-            grid-template-columns: 35% 65%;
-            box-shadow: 0 4px 20px #00000015;
-        }
+.cv {
+    width: 100%;
+    max-width: 850px;
+    min-height: 1100px;
+    margin: auto;
+    background: white;
+}
 
-        .left {
-            background: #203b4a;
-            color: white;
-            padding: 35px 25px;
-        }
+.header {
+    background: #dedee2;
+    text-align: center;
+    padding: 35px 10px;
+}
 
-        .right {
-            padding: 35px 30px;
-        }
+.header h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
 
-        h1 {
-            font-size: 30px;
-            margin-bottom: 5px;
-            color: white;
-        }
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    padding: 35px 30px;
+}
 
-        .role {
-            color: #b9d8df;
-            margin-bottom: 30px;
-        }
+.section {
+    margin-bottom: 30px;
+}
 
-        h2 {
-            font-size: 18px;
-            color: #203b4a;
-            border-bottom: 2px solid #b9d8df;
-            padding-bottom: 6px;
-            margin: 22px 0 12px;
-        }
+.section h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        .left h2 {
-            color: white;
-            border-color: #8eb6c2;
-        }
+.icon {
+    font-size: 24px;
+}
 
-        p, li {
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
+.section p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
 
-        ul {
-            padding-left: 18px;
-        }
+ul {
+    padding-left: 25px;
+}
 
-        .item {
-            margin-bottom: 18px;
-        }
+li {
+    font-size: 15px;
+    line-height: 1.7;
+}
 
-        .date {
-            color: #55717c;
-            font-size: 13px;
-            font-weight: bold;
-        }
+.item {
+    border-left: 2px solid #333;
+    padding-left: 25px;
+    margin-left: 5px;
+    margin-bottom: 25px;
+    position: relative;
+}
 
-        a {
-            color: #d5edf3;
-            overflow-wrap: anywhere;
-        }
+.item::before,
+.item::after {
+    content: "";
+    position: absolute;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #333;
+}
 
-        @media(max-width: 650px) {
-            .cv {
-                grid-template-columns: 1fr;
-            }
+.item::before {
+    top: 0;
+}
 
-            .left, .right {
-                padding: 25px;
-            }
-        }
-    </style>
+.item::after {
+    bottom: 0;
+}
+
+.item h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.date {
+    font-size: 17px !important;
+    font-weight: bold;
+}
+
+.contact p {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 5px 0;
+    }
+
+    .header {
+        padding: 22px 5px;
+    }
+
+    .header h1 {
+        font-size: 29px;
+    }
+
+    .content {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        padding: 20px 12px;
+    }
+
+    .section {
+        margin-bottom: 22px;
+    }
+
+    .section h2 {
+        font-size: 15px;
+        gap: 5px;
+        margin-bottom: 12px;
+    }
+
+    .icon {
+        font-size: 17px;
+    }
+
+    .section p,
+    li {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .item {
+        padding-left: 12px;
+        margin-left: 3px;
+        margin-bottom: 18px;
+    }
+
+    .item h3 {
+        font-size: 12px;
+    }
+
+    .date {
+        font-size: 12px !important;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+}
+
+@media print {
+    body {
+        padding: 0;
+        background: white;
+    }
+
+    .cv {
+        max-width: 100%;
+    }
+
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <div class="cv">
 
-    <aside class="left">
+<header class="header">
+    <h1>Ariba Maryum</h1>
+</header>
 
-        <h1>Ariba Maryum</h1>
-        <p class="role">Professional CV</p>
+<div class="content">
 
-        <h2>Contact</h2>
-        <p>0322-2966960</p>
-        <p>aribamaryum291208@gmail.com</p>
-        <p>Karachi, Pakistan</p>
+<!-- LEFT COLUMN -->
+<div class="left">
 
-        <h2>Skills</h2>
-        <ul>
-            <li>Digital Literacy</li>
-            <li>Administrative Support</li>
-            <li>Creative Designing</li>
-            <li>Basic Web Development</li>
-            <li>Customer Relations</li>
-            <li>Problem Solving</li>
-            <li>Adaptability</li>
-            <li>Quick Learning</li>
-        </ul>
+<section class="section">
+    <h2><span class="icon">👤</span> About Me</h2>
+    <p>
+    A self-motivated, adaptable, and dedicated individual
+    with a positive attitude and willingness to learn.
+    Capable of adjusting to different work environments,
+    taking on new challenges, and approaching tasks
+    with responsibility. Seeking an opportunity to
+    contribute to an organization while enhancing
+    professional growth.
+    </p>
+</section>
 
-        <h2>Languages</h2>
-        <p>Urdu</p>
-        <p>English</p>
+<section class="section contact">
+    <h2><span class="icon">▣</span> Contact</h2>
+    <p>☎ 0322-2966960</p>
+    <p>✉ aribamaryum291208@gmail.com</p>
+    <p>📍 Karachi, Pakistan</p>
+</section>
 
-        <h2>Certifications</h2>
-        <p>Microsoft Office Course</p>
-        <p>Front-End Web Development</p>
+<section class="section">
+    <h2><span class="icon">⚙</span> Skills</h2>
+    <ul>
+        <li>Digital Literacy</li>
+        <li>Administrative Support</li>
+        <li>Creative Designing</li>
+        <li>Basic Web Development</li>
+        <li>Customer Relations</li>
+        <li>Problem Solving</li>
+        <li>Adaptability</li>
+        <li>Quick Learning</li>
+    </ul>
+</section>
 
-    </aside>
-
-    <main class="right">
-
-        <h2>About Me</h2>
-
-        <p>
-            A self-motivated, adaptable, and dedicated individual
-            with a positive attitude and willingness to learn.
-            Capable of adjusting to different work environments,
-            taking on new challenges, and approaching tasks with
-            responsibility. Seeking an opportunity to contribute
-            to an organization while enhancing professional growth.
-        </p>
-
-        <h2>Education</h2>
-
-        <div class="item">
-            <p class="date">2021 - 2023</p>
-            <h3>Al Hira English School</h3>
-            <p>Matriculation in Science</p>
-        </div>
-
-        <div class="item">
-            <p class="date">2023 - 2025</p>
-            <h3>GDGC Bufferzone Karachi</h3>
-            <p>Intermediate in Pre-Medical</p>
-        </div>
-
-        <div class="item">
-            <p class="date">2025 - Present</p>
-            <h3>The Heaven College of Nursing</h3>
-            <p>Lady Health Visitor (LHV) Diploma</p>
-        </div>
-
-        <h2>Work Experience</h2>
-
-        <div class="item">
-            <p class="date">June 2025 - March 2026</p>
-            <h3>The Flash Review</h3>
-            <p>Junior Associate</p>
-        </div>
-
-        <div class="item">
-            <p class="date">May 2026 - Present</p>
-            <h3>Insaaf Medical Complex</h3>
-            <p>Receptionist</p>
-        </div>
-
-    </main>
+<section class="section">
+    <h2><span class="icon">文</span> Language</h2>
+    <ul>
+        <li>Urdu</li>
+        <li>English</li>
+    </ul>
+</section>
 
 </div>
 
+<!-- RIGHT COLUMN -->
+<div class="right">
+
+<section class="section">
+    <h2><span class="icon">🎓</span> Education</h2>
+
+    <div class="item">
+        <p class="date">(2021-2023)</p>
+        <h3>AL HIRA ENGLISH SCHOOL</h3>
+        <p>Matriculation In Science</p>
+    </div>
+
+    <div class="item">
+        <p class="date">(2023-2025)</p>
+        <h3>GDGC BUFFERZONE KARACHI</h3>
+        <p>Intermediate In Pre-Medical</p>
+    </div>
+
+    <div class="item">
+        <p class="date">(2025-Present)</p>
+        <h3>THE HEAVEN COLLEGE OF NURSING</h3>
+        <p>Lady Health Visitor (LHV) Diploma</p>
+    </div>
+</section>
+
+<section class="section">
+    <h2><span class="icon">🏅</span> Experience</h2>
+
+    <div class="item">
+        <p class="date">June 2025 - March 2026</p>
+        <h3>THE FLASH REVIEW</h3>
+        <p>Worked As Junior Associate</p>
+    </div>
+
+    <div class="item">
+        <p class="date">May 2026 - Present</p>
+        <h3>INSAAF MEDICAL COMPLEX</h3>
+        <p>Worked As Receptionist</p>
+    </div>
+</section>
+
+<section class="section">
+    <h2><span class="icon">📜</span> Certifications</h2>
+    <ul>
+        <li>Microsoft Office Course</li>
+        <li>Front-End Web Development</li>
+    </ul>
+</section>
+
+</div>
+</div>
+</div>
+
 </body>
-                                        </html>
-                                        
+</html>
